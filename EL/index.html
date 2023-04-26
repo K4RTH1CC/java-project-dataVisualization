@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+    httpRequest = new XMLHttpRequest();
+    httpRequest.open('GET', 'http://127.0.0.1:8000/data', true);
+    httpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    httpRequest.onreadystatechange = function(){
+        if(httpRequest.readyState === httpRequest.DONE) {
+            if(httpRequest.status === 200) {
+                var jsonArray = JSON.parse(httpRequest.responseText);
+                console.log(jsonArray);
+            }
+        }
+    };
+    httpRequest.send();
+</script>
+</body>
+</html>

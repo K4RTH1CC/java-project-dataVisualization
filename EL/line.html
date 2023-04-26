@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time Series</title>
+    
+    <link href="css/default.css" rel="stylesheet">
+    
+</head>
+<body>
+    <style>
+        .predict_button{
+            position: relative;
+            top: 10px;
+            border: 3px solid #000000;
+            background-color: white;
+            font-size: 16px;
+            padding: 14px;
+            border-radius: 8px;
+            transition-duration: 0.4s;
+        }
+        .predict_button:hover{
+            background-color: #4CAF50; /* Green */
+            color: white;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+    </style>
+	<div class="chart-container">
+		<canvas id="line-chartcanvas"></canvas>
+        <center><button class="predict_button" id="pred_button">Predict</button></center>
+        <script>
+            let pred_button = document.getElementById('pred_button');
+            pred_button.addEventListener('click', function(){
+                let script = document.createElement('script');
+                script.src = 'new_js/line.js';
+                document.body.appendChild(script);
+            });
+        </script>
+	</div>
+
+	<!-- javascript 
+        function loadScript() {
+    var script2 = document.createElement("script");
+    script2.src = "newjs/line.js";
+    document.body.appendChild(script2);
+  }
+  // Define the loadScript() function
+  
+  // Call the loadScript() function when the button is clicked
+  var button = document.querySelector("Predict");
+  button.addEventListener("click", loadScript);-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+
+    <script src="js/line.js"></script>
+   
+      
+    
+</body>
+</html>
+
+  

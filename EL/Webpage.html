@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="Upload.js"></script>
+    <title>Database Visualization</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+      }
+
+      .container {
+        margin: auto;
+        max-width: 500px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      input[type="file"] {
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      button {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Database Visualization</h1>
+    <div class="container">
+      <form action="upload.php" method="POST" enctype="multipart/form-data">
+        <label for="file">Select a file to upload:</label>
+        <input type="file" id="file" name="file" accept=".txt,.pdf,.doc,.docx,.csv">
+        <button type="submit">Upload</button>
+      </form>
+    </div>
+  </body>
+</html>

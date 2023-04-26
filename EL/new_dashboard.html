@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+        <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>Database Visualization</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="keywords" content="web design, web template, web structure">
+            <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+        </head>
+
+<body>
+    <!--<header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Database</span> Visualization</h1>
+            </div>            
+        </div>
+    </header>-->
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Database Visualization</h1>
+            <p>Decrease in the cost of memory and proliferation of internet enabled devices across the world have led to massive amounts of data being collected and stored. These massive datasets are continuously streamed into database systems and are stored for further analysis.
+            </p>
+        </div>
+    </section>
+
+    <section id="newsletter">
+        <div class="container">
+            <h1>Select your Visualization:</h1>
+            
+               <!--<input type="email" placeholder="Please Enter Your Email..">--> 
+               <select id="option-list">
+                    <option value="">Select an option</option>
+                    <option value="line.html">Time Series</option>
+                    <option value="bar.html">Histogram</option>
+                    <option value="pie.html">Pie</option>
+                  </select>
+                  <button onclick="proceedToPage()"class="button_1">Visualize</button>
+                  
+            
+            <script>
+                function proceedToPage() {
+                  var optionList = document.getElementById("option-list");
+                  var selectedOption = optionList.value;
+                  if (selectedOption) {
+                    window.location.href = selectedOption;
+                  }
+                }
+              </script>
+        </div>
+    </section> 
+    </body>
+
+</html>
